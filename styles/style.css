@@ -171,6 +171,13 @@ body {
     top: 17px;
 }
 
+.attribution {
+    position: relative;
+    text-align: center;
+    bottom: 40px;
+    font-size: 0.7rem;
+}
+
 @media (max-width: 600px) {
     body {
         background-image: url(../images/bg-intro-mobile.png);
