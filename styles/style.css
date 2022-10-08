@@ -53,19 +53,21 @@ body {
 }
 
 .containerForm {
-    height: 400px;
+    height: auto;
     width: 100%;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 7px 2px rgba(0, 0, 0, 0.2);
 }
 
-.containerForm p {
+.containerForm > p {
     color: var(--gravishBlue);
     font-size: 0.7em;
     text-align: center;
     width: 90%;
+    padding-bottom: 25px;
     margin: 0 auto;
+    
 }
 
 .containerForm p span {
@@ -81,6 +83,7 @@ body {
 }
 
 .formInputs input, .formInputs button {
+    width: 100%;
     height: 45px;
     padding-left: 25px ;
     outline: none;
@@ -103,6 +106,7 @@ body {
 }
 
 .formInputs button {
+    margin-top: 10px;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -112,8 +116,59 @@ body {
     box-shadow: 0 3px 1px rgba(21, 160, 79, 0.808);
 }
 
+.formControl {
+    position: relative;
+}
+
+.formControl .error {
+    border: 1px solid var(--red);
+}
+
+.pError {
+    font-style: italic;
+    color: var(--red);
+    text-align: end;
+    margin-bottom: 15px;
+    font-size: 0.6em;
+    display: none;
+    margin-top: -10px;
+}
+
+.pError.active {
+    display: block;
+}
+
+.imgError {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.imgError.active {
+    display: block;
+}
+
 .formInputs button:hover {
     opacity: 0.6;
+}
+
+.formControl .passwordLength {
+    color: var(--darkBlue);
+    display: inline-block;
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    font-weight: 600;
+}
+
+.show {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 50px;
+    top: 17px;
 }
 
 @media (max-width: 600px) {
@@ -166,6 +221,10 @@ body {
     .formInputs button {
         font-weight: 500;
     }
+
+    .imgError {
+        top: 13px;
+    }
 }
 
 @media (min-width: 601px) and (max-width: 840px) {
@@ -186,7 +245,7 @@ body {
     }
     
     .containerForm {
-        height: 365px;
+        height: auto;
     }
 
     .form .accent p{
